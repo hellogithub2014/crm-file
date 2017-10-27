@@ -1,0 +1,20 @@
+{
+  "name": "crm-file-uploader",
+  "version": "1.0.0",
+  "description": "用于记录在pc端项目中用到的文件上传下载所用技术。",
+  "main": "crm-file.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellogithub2014/crm-file.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hellogithub2014/crm-file/issues"
+  },
+  "homepage": "https://github.com/hellogithub2014/crm-file#readme"
+}
