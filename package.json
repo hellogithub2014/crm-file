@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/hellogithub2014/crm-file/issues"
   },
-  "homepage": "https://github.com/hellogithub2014/crm-file#readme"
+  "homepage": "https://github.com/hellogithub2014/crm-file#readme",
+  "dependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-google": "^0.9.1"
+  }
 }
