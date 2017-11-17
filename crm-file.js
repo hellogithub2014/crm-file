@@ -14,6 +14,7 @@
      /**
       * 判断浏览器是否为IE9以上
       *
+      * @author liubin
       * @returns
       */
      function isUpperIE9() {
@@ -278,7 +279,33 @@
          $(document.body).append(formHtml);
          $('#cmbCallerForm').submit();
          $('#cmbCallerForm').remove();
-     }
+     };
+
+     /**
+      * 新的下载文件方法
+      *
+      * @link https://mp.weixin.qq.com/s/U_LuC2Nyv4ZcNpX0tHDP3g
+      * @author liubin
+      * @param {string} fileUrl 文件url
+      * @param {stirng} fileName 下载后设置的文件名
+      */
+     function downloadFile(fileUrl, fileName) {
+         const a = document.createElement('a');
+         a.href = fileUrl;
+         a.download = fileName;
+         a.click();
+
+         // 如果不能通过url直接下载文件，而只能通过api来获取文件流blob，那么可以参考以下方法：
+         fetch('http://somehost/somefile.zip').then((res) => res.blob().then((blob) => {
+             let a = document.createElement('a');
+             let url = window.URL.createObjectURL(blob);
+             let filename = 'myfile.zip';
+             a.href = url;
+             a.download = filename;
+             a.click();
+             window.URL.revokeObjectURL(url);
+         }));
+     };
 
      /**
       * 获取附件列表，每个附件对象包含:
